@@ -1,9 +1,9 @@
 /**
  * 
  */
-package es.alberto.delegate.behaviors;
+package es.alberto.strategy.behaviors;
 
-import es.alberto.delegate.FlyBehavior;
+import es.alberto.strategy.FlyBehavior;
 
 /**
  * @author jamartin

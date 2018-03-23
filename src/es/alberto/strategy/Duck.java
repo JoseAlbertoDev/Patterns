@@ -1,21 +1,23 @@
 /**
  * 
  */
-package es.alberto.delegate;
+package es.alberto.strategy;
 
-import es.alberto.delegate.behaviors.NoFly;
+import es.alberto.strategy.behaviors.NoFly;
 
 /**
  * @author jamartin
  *
  */
-public class Duck {
+public abstract class Duck {
 	
 	FlyBehavior flyBehavior;
 	QuackBehavior quackBehavior;
 	
 	public Duck() {
 	}
+	
+	public abstract void display();
 	
 	public void performFly() {
 		flyBehavior.fly();
@@ -27,14 +29,21 @@ public class Duck {
 	
 	public void setFlyBehavior(FlyBehavior flyBehavior) {
 		this.flyBehavior = flyBehavior;
-		performFly();
+	}
+	
+	public void setQuackBehavior(QuackBehavior quackBehavior) {
+		this.quackBehavior = quackBehavior;
+	}
+	
+	public void swim() {
+		System.out.println("Casi todos flotan");
 	}
 	
 	public static void main(String[] args) {
 		RareDuck r = new RareDuck();
 		r.performFly();
-		r.performQuack();
 		r.setFlyBehavior(new NoFly());
+		r.performFly();
 	}
 
 }

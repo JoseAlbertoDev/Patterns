@@ -1,7 +1,7 @@
 /**
  * 
  */
-package es.alberto.delegate;
+package es.alberto.strategy;
 
 /**
  * @author jamartin
